@@ -58,15 +58,15 @@ font-size:40px;
 </style>
 
     <!-- footer -->
-    <div class="container_wrap footer_color" id="contact" style="background-color:#ffffff;">
-        <div class="container" style="background-color:#ffffff;">
+    <div class="container_wrap footer_color" id="contact" style="background-color:black;box-shadow: 0px -5px 18px 6px #111;box-sizing: border-box;">
+        <div class="container" style="background-color: black;">
             <div class="row">
                 <div class="col-md-12">
                   
                     <section style="text-align:center;">
                         <div class="testimonial" style="margin:20px 0 ">
                         <ul class="social-links">
-                            <li><a href="https://www.linkedin.com/in/ben-hogarth-23078b64/" class="fa fa-linkedin" target="_blank"></a></li>
+                            <!-- <li><a href="https://www.linkedin.com/in/ben-hogarth-23078b64/" class="fa fa-linkedin" target="_blank"></a></li> -->
                             <li><a href="https://www.facebook.com/ben.hogarth.audio" class="fa fa-facebook"  target="_blank"></a></li>
                             <li><a href="https://twitter.com/Ben_Hogarth" class="fa fa-twitter" target="_blank"></a></li>
                             <li><a href="https://www.instagram.com/ben_hogarth" class="fa fa-instagram" target="_blank"></a></li>

@@ -36,7 +36,7 @@
 											</div>
 											<div style="width:100%" class="text">
 												<h4 style="color: white">Discography</h4>
-												<span><?php echo $artist ?> items</span>
+												<span><?php echo $discography ?> artworks</span>
 											</div>
 										</div>
 

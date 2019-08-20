@@ -5,22 +5,97 @@
     display:inline-block;
     }
     .head_icon .head_newicon{
-      float:right;
      padding:0px 10px;
     }
     .head_icon li a{
     color:white;
     }
     .viewmore{
-        transition: transform .8s;
+      transition: transform .8s;
     }
     .viewmore:hover{
-       transform: scale(1.3);
+      transform: scale(1.3);
     }
     .head_icon{
-      margin:0px 2%;
+      margin:0px 1%;
       color:white;
     }
+    .head_newicon .navbar{
+      min-height:unset;
+      margin-bottom:0px;
+    }
+    .menu-bg .navbar-nav .active {
+      color: #f2292e !important;
+    }
+    .navmenu li{
+      display:list-item;
+    }
+
+  .navbar-expand-md .navbar-nav .nav-link {
+    color: white;
+    font-size: 15px;
+    padding: 5px 0px;
+    margin-left: 30px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+  }
+
+.navbar-expand-md .navbar-nav .nav-link:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #9c9c9c;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar-expand-md .navbar-nav .active::before,
+.navbar-expand-md .navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+.navbar-brand {
+  color: #fff;
+}
+
+.navbar-expand-md .navbar-nav .nav-link:focus,
+.navbar-expand-md .navbar-nav .nav-link:hover,
+.navbar-expand-md .navbar-nav .nav-link:hover:before {
+  color: #9c9c9c;
+}
+
+.navbar-expand-md .navbar-nav .active>.nav-link,
+.navbar-expand-md .navbar-nav .nav-link.active,
+.navbar-expand-md .navbar-nav .nav-link.active:before,
+.navbar-expand-md .navbar-nav .nav-link.open,
+.navbar-expand-md .navbar-nav .open>.nav-link {
+  color: #9c9c9c;
+}
+
+.navbar-expand-md .navbar-toggler {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 2px;
+  margin: 5px;
+  cursor: pointer;
+  float: right;
+  padding: .10rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.navbar-expand-md .navbar-toggler i {
+    color: #282425 !important;
+}
+
+.navbar-expand-md .navbar-toggler:focus {
+  outline: none;
+}
+
     #contact-foot .form-control {
  width:50%;
   margin-bottom: 10px;
@@ -105,14 +180,40 @@ width: 96px;
 }
 
 @media screen and (max-width: 768px) {
-.head_icon .head_newicon{
- padding:0px 4px;
+  .head_icon .head_newicon{
+  padding:0px 4px;
+  }
+  .head_icon{
+    margin:0px; 
+  }
+  .navbar {
+      padding: 0;
+    }
+  .navbar-expand-md .navbar-brand,
+  .navbar-expand-md .navbar-toggler {
+    margin: 0px 8px;
+  }
+
+  .navbar-expand-md .navbar-nav {
+    margin-bottom: 10px;
+  }
+
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding: 10px 0px;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .navbar-expand-md{
+  width: 18%;
+    float: right;}
 }
-.head_icon{
-  margin:0px; 
+@media (min-width: 992px){
+  .navbar-expand-md .navbar-toggler {
+      display: none;
+  }
+
 }
-}
-  
 </style>
 <body>
     <!-- header -->
@@ -183,15 +284,42 @@ width: 96px;
 
   
 
-  <section id="slct" class="wrapper" style="background-color:black;">
+  <section id="slct" class="wrapper" style="background-color:black;padding-bottom: 0px;">
     <div class="container-fluid">
       <div class="slct" style="background-color:black;font-family: arial!important;">
-       <ul class="head_icon">
-          <li>BENHOGARTH</li>
-          <li class="head_newicon"><a href="mailto:info@benhogarth.com" class="fa fa-envelope"></a></li>
+       <ul class="head_icon" style="position:absolute;">
+          <li class="head_newicon">BENHOGARTH</li>
+         
+          <!-- <li class="head_newicon"><a href="mailto:info@benhogarth.com" class="fa fa-envelope"></a></li>
           <li class="head_newicon"><a href="https://wetransfer.com" class="fa fa-upload" target="_blank"></a></li>
-          <li class="head_newicon"><a href="<?php echo base_url()?>homeweb/booking" class="fa fa-calendar-check-o" target="_blank" ></a></li>
-        </ul>
+          <li class="head_newicon"><a href="<?php echo base_url()?>homeweb/booking" class="fa fa-calendar-check-o" target="_blank" ></a></li> -->
+          </ul>
+        <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+          <div class="container-fluid">
+         
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="float:right;">
+              <ul class="navbar-nav mr-auto w-100 justify-content-end navmenu">
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/booking" target="_blank">BOOKING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="https://wetransfer.com" target="_blank">MIX</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="">MASTER</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="mailto:info@benhogarth.com" target="_blank">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
       </div>
     </div><!-- container -->
   </section>
@@ -209,7 +337,7 @@ width: 96px;
         <img src="<?php echo base_url().$show['image']?>" style="height:100%;">
         <span class="overlay">
         <h2><?php echo $show['heading'] ?></h2>
-        <h4><?php echo $show['name'] ?></h4>
+        <h2 style="font-size:20px;"><?php echo $show['name'] ?></h2>
         </span>
       </a>
     <?php }?>
@@ -219,9 +347,9 @@ width: 96px;
 
   <section id="view" class="wrapper"style="background-color:#ffffff;padding:0px;">
     <div class="container text-center">
-      <div class="view" style="background-color:#ffffff;">
+      <div class="view" style="background-color:#ffffff;margin-bottom:15px;">
        
-       <a onclick="viewmore()" title="viewmore" style="color:black;" id="viewmore"><img class="viewmore" src="<?php echo base_url()?>assets/frontend/images/viewmore.png" style="height:25px;"></a>
+       <a onclick="viewmore()" title="viewmore" style="color:black;" id="viewmore"><img class="viewmore" src="<?php echo base_url()?>assets/frontend/images/dropdown.png" style="height:55px;"></a>
 
       </div></div>
     </div><!-- container -->
