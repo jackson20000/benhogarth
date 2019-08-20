@@ -70,9 +70,6 @@ font-size:40px;
                             <li><a href="https://www.facebook.com/ben.hogarth.audio" class="fa fa-facebook"  target="_blank"></a></li>
                             <li><a href="https://twitter.com/Ben_Hogarth" class="fa fa-twitter" target="_blank"></a></li>
                             <li><a href="https://www.instagram.com/ben_hogarth" class="fa fa-instagram" target="_blank"></a></li>
-                            <li><a href="<?php echo base_url()?>homeweb/booking" class="fa fa-calendar-check-o" target="_blank" ></a></li>
-                            <li><a href="https://wetransfer.com" class="fa fa-upload" target="_blank"></a></li>
-                            <li><a href="mailto:info@benhogarth.com" class="fa fa-envelope"></a></li>
                             <li><a href="https://open.spotify.com/playlist/7bvCgNenWit1QhuaaCl07p?si=6aaUIftIR1W2Q4tGV8_tAg" class="fa fa-spotify" target="_blank"></a></li>
                         </ul>
                         </div>
