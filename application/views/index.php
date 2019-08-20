@@ -307,7 +307,7 @@ width: 96px;
                   <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/booking" target="_blank">BOOKING</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link page-scroll" href="https://wetransfer.com" target="_blank">MIX</a>
+                  <a class="nav-link page-scroll" href="https://wetransfer.com/?to=info@benhogarth.com" target="_blank">MIX</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link page-scroll" href="">MASTER</a>
