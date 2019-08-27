@@ -49,6 +49,25 @@ echo '<input type="button" id="load" value="Load More">';
 		$this->load->view('about');
 		$this->load->view('footer');
 	}
+	public function book_studio(){
+		$this->load->view('header');
+		$this->load->view('menu');
+		$this->load->view('book');
+		$this->load->view('footer');
+	}
+	public function mix(){
+		$this->load->view('header');
+		$this->load->view('menu');
+		$this->load->view('mix');
+		$this->load->view('footer');
+	}
+
+	public function master(){
+		$this->load->view('header');
+		$this->load->view('menu');
+		$this->load->view('master');
+		$this->load->view('footer');
+	}
 	
 	public function artist_detail(){
 		$id=$this->input->get('id');
@@ -83,7 +102,7 @@ echo '<input type="button" id="load" value="Load More">';
 		$data=$this->dashboard_model->studio_list();
 		$datas['mapdata']=json_encode($this->dashboard_model->get_mapdata());
 		$this->load->view('header');
-		$this->load->view('menu');
+		
 		$this->load->view('booking',$data);
 		$this->load->view('footer',$datas);
 	}	

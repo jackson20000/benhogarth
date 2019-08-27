@@ -27,74 +27,8 @@
     .menu-bg .navbar-nav .active {
       color: #f2292e !important;
     }
-    .navmenu li{
-      display:list-item;
-    }
 
-  .navbar-expand-md .navbar-nav .nav-link {
-    color: white;
-    font-size: 15px;
-    padding: 5px 0px;
-    margin-left: 30px;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-  }
 
-.navbar-expand-md .navbar-nav .nav-link:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #9c9c9c;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.navbar-expand-md .navbar-nav .active::before,
-.navbar-expand-md .navbar-nav .nav-link:hover::before {
-  width: 100%;
-}
-
-.navbar-brand {
-  color: #fff;
-}
-
-.navbar-expand-md .navbar-nav .nav-link:focus,
-.navbar-expand-md .navbar-nav .nav-link:hover,
-.navbar-expand-md .navbar-nav .nav-link:hover:before {
-  color: #9c9c9c;
-}
-
-.navbar-expand-md .navbar-nav .active>.nav-link,
-.navbar-expand-md .navbar-nav .nav-link.active,
-.navbar-expand-md .navbar-nav .nav-link.active:before,
-.navbar-expand-md .navbar-nav .nav-link.open,
-.navbar-expand-md .navbar-nav .open>.nav-link {
-  color: #9c9c9c;
-}
-
-.navbar-expand-md .navbar-toggler {
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 2px;
-  margin: 5px;
-  cursor: pointer;
-  float: right;
-  padding: .10rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-}
-
-.navbar-expand-md .navbar-toggler i {
-    color: #282425 !important;
-}
-
-.navbar-expand-md .navbar-toggler:focus {
-  outline: none;
-}
 
     #contact-foot .form-control {
  width:50%;
@@ -136,48 +70,8 @@ background: #e9e9e9;
   background-color:#9999999;
 }
 
-.up:hover {
-  opacity: 0.3;
-   background-color:#9999999;
-}
-#more,#more1 {display: none;}
 
-#myBtn{
-  color:white;
-background-color:black;
-width: 96px;
- border: none;
-  outline:none;
-  background:transparent;
-}
-.hvr-efft{
-   transform: scale(1);
-   transition:.5s;
-}
-.hvr-efft:hover{
-   transform: scale(.98);
-}
-.hvr-efft:hover  ~ .effect-shine:after {
-    opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
 
-.effect-shine:after {
-	content: '';
-  position: absolute;
-  left: 0;
-  display: inline-block;
-  height: .9em;
-  width: 100%;
-  border-bottom: 1px solid;
-  margin-top: 10px;
-  opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
-}
 
 @media screen and (max-width: 768px) {
   .head_icon .head_newicon{
@@ -186,34 +80,9 @@ width: 96px;
   .head_icon{
     margin:0px; 
   }
-  .navbar {
-      padding: 0;
-    }
-  .navbar-expand-md .navbar-brand,
-  .navbar-expand-md .navbar-toggler {
-    margin: 0px 8px;
-  }
-
-  .navbar-expand-md .navbar-nav {
-    margin-bottom: 10px;
-  }
-
-  .navbar-expand-md .navbar-nav .nav-link {
-    padding: 10px 0px;
-    text-align: left;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .navbar-expand-md{
-  width: 18%;
-    float: right;}
+  
 }
-@media (min-width: 992px){
-  .navbar-expand-md .navbar-toggler {
-      display: none;
-  }
 
-}
 </style>
 <body>
     <!-- header -->
@@ -304,13 +173,13 @@ width: 96px;
             <div class="collapse navbar-collapse" id="navbarCollapse" style="float:right;">
               <ul class="navbar-nav mr-auto w-100 justify-content-end navmenu">
                 <li class="nav-item">
-                  <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/booking" target="_blank">BOOKING</a>
+                  <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/book_studio" target="_blank">BOOKING</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link page-scroll" href="https://wetransfer.com/?to=info@benhogarth.com" target="_blank">MIX</a>
+                  <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/mix" target="_blank">MIX</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link page-scroll" href="">MASTER</a>
+                  <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/master" target="_blank">MASTER</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link page-scroll" href="mailto:info@benhogarth.com" target="_blank">CONTACT</a>
@@ -320,8 +189,8 @@ width: 96px;
           </div>
         </nav>
         
-      </div>
-    </div><!-- container -->
+       </div>
+    </div>
   </section>
 
 
