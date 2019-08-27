@@ -31,10 +31,10 @@
     }
  
     @media screen and (max-width: 768px) {
-    .book_section  #book-div{
-       margin-bottom:16px;
-        font-size:25px;
-    }
+        .book_section  #book-div{
+            margin-bottom:16px;
+            font-size:25px;
+        }
   
     }
 </style>

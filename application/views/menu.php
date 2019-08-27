@@ -52,7 +52,7 @@
                   <a style="text-decoration:none;" class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/master" target="_blank">MASTER</a>
                 </li>
                 <li class="nav-item">
-                  <a style="text-decoration:none;" class="nav-link page-scroll" href="mailto:info@benhogarth.com" target="_blank">CONTACT</a>
+                  <a style="text-decoration:none;" class="nav-link page-scroll" href="mailto:info@benhogarth.com">CONTACT</a>
                 </li>
               </ul>
             </div>

@@ -27,61 +27,50 @@
     .menu-bg .navbar-nav .active {
       color: #f2292e !important;
     }
-
-
-
     #contact-foot .form-control {
- width:50%;
-  margin-bottom: 10px;
-  padding: 15px 30px;
-  font-size: 14px;
-  border-radius: 30px;
-  text-align: center;
-  border: 1px solid #a7a6a685;
-  box-shadow: 6px 0px 43px rgba(131, 131, 131, 0.13);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-   display: inline;
-background: #e9e9e9;
-}
-
-#contact-foot .form-control:focus {
-  border: 1px solid #9c9c9c;
-  outline: none;
-  box-shadow: none;
-}
-
-#contact-foot {
-     background: #ffffff;
-  padding-bottom: 20px;
-  position: relative;
-  text-align: center;
- 
-}
-#contact-foot .submit-button #submit{
-    background: #333;
-    color: white;
-}
-
-  
-.up:hover.overlay {
- 
-  background-color:#9999999;
-}
-
-
-
-
-@media screen and (max-width: 768px) {
-  .head_icon .head_newicon{
-  padding:0px 4px;
+      width:50%;
+      margin-bottom: 10px;
+      padding: 15px 30px;
+      font-size: 14px;
+      border-radius: 30px;
+      text-align: center;
+      border: 1px solid #a7a6a685;
+      box-shadow: 6px 0px 43px rgba(131, 131, 131, 0.13);
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+        display: inline;
+      background: #e9e9e9;
   }
-  .head_icon{
-    margin:0px; 
-  }
-  
-}
+
+    #contact-foot .form-control:focus {
+      border: 1px solid #9c9c9c;
+      outline: none;
+      box-shadow: none;
+    }
+
+    #contact-foot {
+      background: #ffffff;
+      padding-bottom: 20px;
+      position: relative;
+      text-align: center;
+    }
+    #contact-foot .submit-button #submit{
+      background: #333;
+      color: white;
+    }
+
+    .up:hover.overlay {
+      background-color:#9999999;
+    }
+    @media screen and (max-width: 768px) {
+      .head_icon .head_newicon{
+      padding:0px 4px;
+      }
+      .head_icon{
+        margin:0px; 
+      }
+    }
 
 </style>
 <body>
@@ -182,7 +171,7 @@ background: #e9e9e9;
                   <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/master" target="_blank">MASTER</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link page-scroll" href="mailto:info@benhogarth.com" target="_blank">CONTACT</a>
+                  <a class="nav-link page-scroll" href="mailto:info@benhogarth.com">CONTACT</a>
                 </li>
               </ul>
             </div>
