@@ -35,7 +35,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 
 a {
-  color: #9c9c9c;
+	color: #9c9c9c;
 
 }
 
@@ -150,8 +150,8 @@ main {
 
 
 /*===== Header ===*/
-*{
-font-family: 'arial' !important;
+* {
+	font-family: 'arial' !important;
 }
 
 header[role="header"] .head_logo {
@@ -201,13 +201,13 @@ header[role="header"] nav ul>li {
 header[role="header"] nav ul>li>a {
 	display: block;
 	line-height: 72px;
-	color:#000000;
+	color: #000000;
 }
 
 header[role="header"] nav ul>li:hover a,
 header[role="header"] nav ul>li.nav-active a {
 	text-decoration: none;
-	color:#999999;
+	color: #999999;
 }
 
 header[role="header"] nav #menu-button {
@@ -374,10 +374,11 @@ header[role="header"] nav #menu-button.open span:nth-child(3) {
 .footer_color {
 	background-color: #517664;
 	color: #9c9c9c;
-	padding: 30px 0px;
+	padding: 10px 0px;
 }
-a:hover{
-	  color: #9c9c9c;
+
+a:hover {
+	color: #9c9c9c;
 }
 
 .copyright {
