@@ -19,7 +19,7 @@
 
     .button-custom:hover {
         background-color: gray;
-        box-shadow: 0px 5px 5px gray;
+        /* box-shadow: 0px 5px 5px gray; */
         color: #fff;
         transform: translateY(-7px);
     }
