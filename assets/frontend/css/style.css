@@ -787,8 +787,8 @@ ul {
   cursor: pointer;
   float: right;
   padding: .10rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
+  font-size: 1.2rem;
+  /* line-height: 1; */
 }
 
 .navbar-expand-md .navbar-toggler i {
@@ -901,7 +901,7 @@ ul {
 
   .navbar-expand-md .navbar-brand,
   .navbar-expand-md .navbar-toggler {
-    margin: 0px 8px;
+    margin: 0px 0px;
   }
 
   .navbar-expand-md .navbar-nav {
