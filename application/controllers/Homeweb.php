@@ -205,7 +205,7 @@ echo '<input type="button" id="load" value="Load More">';
         <img src="'.base_url().$value['image'].'" style="height:100%;">
         <span class="overlay">
         <h2>'.$value['heading'].'</h2>
-        <h4>'.$value['name'].'</h4>
+        <h2 style="font-size:20px">'.$value['name'].'</h2>
         </span>
       </a>';
 		}

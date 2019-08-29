@@ -177,7 +177,6 @@
             </div>
           </div>
         </nav>
-        
        </div>
     </div>
   </section>
@@ -188,9 +187,7 @@
       <a class="gallery-item">
           <?php foreach ($discography as $show) {
     //print_r($list);
-  
      ?>
-      
          <a class="gallery-item" href="<?php echo $show['url'] ?>" target="_blank">
         <img src="<?php echo base_url().$show['image']?>" style="height:100%;">
         <span class="overlay">
