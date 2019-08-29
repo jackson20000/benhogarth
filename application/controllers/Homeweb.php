@@ -51,22 +51,22 @@ echo '<input type="button" id="load" value="Load More">';
 	}
 	public function book_studio(){
 		$this->load->view('header');
-		$this->load->view('menu');
+		// $this->load->view('menu');
 		$this->load->view('book');
-		$this->load->view('footer');
+		// $this->load->view('footer');
 	}
 	public function mix(){
 		$this->load->view('header');
-		$this->load->view('menu');
+		// $this->load->view('menu');
 		$this->load->view('mix');
-		$this->load->view('footer');
+		// $this->load->view('footer');
 	}
 
 	public function master(){
 		$this->load->view('header');
-		$this->load->view('menu');
+		// $this->load->view('menu');
 		$this->load->view('master');
-		$this->load->view('footer');
+		// $this->load->view('footer');
 	}
 	
 	public function artist_detail(){
