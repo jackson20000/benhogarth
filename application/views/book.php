@@ -24,7 +24,14 @@
         transform: translateY(-7px);
     }
     .book_section {
-        padding:12% 10%;    
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right: 0;
+        padding: 15px;
     }
     .book_section  #book-div{
         text-align:center;
@@ -134,7 +141,7 @@
       </div>
     </div><!-- container -->
   </section>
-<section style="background-color:black;color:white;min-height:76.9vh;">
+<section style="background-color:black;color:white;min-height:calc(100vh - 201px);">
     <div class="book_section">
         <div class="row">
             <div class="col-md-4" id="book-div">
