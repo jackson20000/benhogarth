@@ -1,6 +1,6 @@
 
     <div class="head_room_details">
-        <img class="room_details" src="<?php echo base_url()?>assets/frontend/images/request_book/11.png" alt="" style="width:100%">
+        <img class="room_details" src="<?php echo base_url().$show[0]['img_bk']?>" alt="" style="width:100%">
     </div>
     <div class="container">
         <div class="row">
