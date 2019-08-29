@@ -1,4 +1,5 @@
 <style>
+
     .button-custom {
         width: 140px;
         height: 45px;
@@ -23,13 +24,20 @@
         transform: translateY(-7px);
     }
     .book_section {
-        padding:12% 10%;    
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right: 0;
+        padding: 15px;
     }
     .book_section  #book-div{
         text-align:center;
         font-size:25px;
     }
-        .social-links li{
+    .social-links li{
     padding:0px 20px;
     }
     .social-links .fa-linkedin:before {
@@ -85,13 +93,22 @@
             font-size:25px;
         }
     }
- 
+
     @media screen and (max-width: 768px) {
         .book_section  #book-div{
-            margin-bottom:16px;
+        margin-bottom:16px;
             font-size:25px;
         }
-  
+        .book_section {
+        margin: 0;
+        position: initial;
+        top: unset;
+        left: unset;
+        -ms-transform: unset;
+        transform: unset;
+        right: unset;
+        padding: 100px 15px;
+    }
     }
 </style>
 <div style="min-height:100vh;">
@@ -134,7 +151,7 @@
       </div>
     </div><!-- container -->
   </section>
-<section style="background-color:black;color:white;min-height:76.9vh;">
+<section style="background-color:black;color:white;height:calc(100vh - 201px)">
     <div class="book_section">
         <div class="row">
             <div class="col-md-6" id="book-div">

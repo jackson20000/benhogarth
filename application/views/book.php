@@ -99,6 +99,16 @@
         margin-bottom:16px;
             font-size:25px;
         }
+        .book_section {
+        margin: 0;
+        position: initial;
+        top: unset;
+        left: unset;
+        -ms-transform: unset;
+        transform: unset;
+        right: unset;
+        padding: 100px 15px;
+    }
     }
 </style>
 <div style="min-height:100vh;">
