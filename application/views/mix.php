@@ -162,7 +162,7 @@
             </div>
         </div>
         <div style="text-align:center;padding:50px 0px;font-size:25px">
-           <a href=""> <button type="submit" class="button-custom">Mix</button></a>
+           <a href="https://wetransfer.com"><button type="submit" class="button-custom">Mix</button></a>
         </div>
     </div>
 </section>

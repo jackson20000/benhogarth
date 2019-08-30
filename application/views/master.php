@@ -159,7 +159,7 @@
             </div>
         </div>
         <div style="text-align:center;padding:50px 0px;font-size:25px">
-           <a href="<?php echo base_url()?>homeweb/booking"> <button type="submit" class="button-custom">Master</button></a>
+           <a href="https://wetransfer.com"> <button type="submit" class="button-custom">Master</button></a>
         </div>
     </div>
 </section>
