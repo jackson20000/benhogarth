@@ -149,6 +149,7 @@ echo '<input type="button" id="load" value="Load More">';
 
 	public function success(){
 		$this->load->library('paypal');
+		$this->load->library('calender');
 
 		$amount = $this->input->post('amount');
 		$nonce = $this->input->post('payment_method_nonce');
@@ -165,6 +166,7 @@ echo '<input type="button" id="load" value="Load More">';
 		$res=$this->paypal->check($amount,$nonce);
 		if ($res['succ']=='true') {
 			$this->home_model->book($data);
+			$this->calender->createEvent($data);
 			$this->session->unset_userdata('sid');
 			$this->session->unset_userdata('date');
 			$this->session->unset_userdata('start_time');
