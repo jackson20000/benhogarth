@@ -128,17 +128,19 @@ main {
 }
 
 a {
-  color: #9c9c9c;
+	color: #9c9c9c;
 }
-a:hover{
-	  color: #9c9c9c;
+
+a:hover {
+	color: #9c9c9c;
 }
 
 /*===== Header ===*/
-*{
-font-family: 'arial' !important;
+* {
+	font-family: 'arial' !important;
 
 }
+
 header[role="header"] .head_logo {
 	position: relative;
 	padding: 15px 0px;
@@ -188,7 +190,7 @@ header[role="header"] nav ul>li {
 header[role="header"] nav ul>li>a {
 	display: block;
 	line-height: 72px;
-	color:#000000 ;
+	color: #000000;
 }
 
 header[role="header"] nav ul>li:hover a,
@@ -305,6 +307,10 @@ header[role="header"] nav #menu-button.open span:nth-child(3) {
 	position: fixed;
 	width: 25%;
 } */
+.studio_1 {
+	height: 250px;
+	text-align: center;
+}
 
 .studio_details {
 	margin-bottom: 25px;
@@ -319,6 +325,7 @@ header[role="header"] nav #menu-button.open span:nth-child(3) {
 	-webkit-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
 	border-radius: 10px;
+	height: 100%;
 }
 
 .details_section2 {
@@ -330,17 +337,16 @@ header[role="header"] nav #menu-button.open span:nth-child(3) {
 }
 
 .details_section2 .studio_name {
-	width: 46%
+	width: 53%
 }
 
 .studio_display {
-	height: 90vh;
-	overflow-y: auto;
+	margin-bottom: 50px;
 }
 
 /*===== footer ===*/
 .footer_color {
-	background-color:#517664;
+	background-color: #517664;
 	color: #9c9c9c;
 	padding: 30px 0px;
 }
@@ -365,15 +371,44 @@ ul {
 .copy_p {
 	text-align: center;
 }
-.headstd{
-    display:inline-block;
-    width:30%;
-    padding-left: 15px;
+
+.headstd {
+	display: inline-block;
+	width: 33%;
+	padding-left: 15px;
 }
+
 @media screen and (max-width: 600px) {
-  .headstd{
-    display:none;
+	.headstd {
+		display: none;
+	}
+
+	.studio_1,
+	.studio_1 img {
+		height: auto;
+	}
+
+	.hidden-web {
+		display: none !important;
+	}
 }
+
+@media screen and (min-width: 600px) {
+	.hidden-mobile {
+		display: none !important;
+	}
+}
+
+.studios_list {
+	padding: 25px 15px !important;
+	border: 1px solid darkgray !important;
+	border-radius: 15px !important;
+	margin-bottom: 25px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.studio_name li p {
+	margin-left: 15px;
 }
 
 /* footer */

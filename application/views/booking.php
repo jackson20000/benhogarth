@@ -3,7 +3,6 @@
 * {
   box-sizing: border-box;
 }
-
 #myInput {
   /*background-image: url('ben-ap/css/searchicon.png');*/
   background-position: 10px 12px;
@@ -25,8 +24,8 @@
     </div>
     <!-- section -->
         <div class="row" style="margin: 0!important">
-            <div class="col-lg-6">
-                <div class="container-fluid" style="padding-right:0!important">
+            <div class="col-lg-12">
+                <div class="container" style="padding-right:0!important">
                     <!--<h1 class="studio">Premium Studios</h1>-->
                     <!--<p class="studio_p">Our selection of studios verified by our team</p>-->
  
@@ -45,15 +44,18 @@
                     <div class="headstd"><b>Rate</b> <img src="<?php echo base_url()?>assets/frontend/images/descendant.png" style="height:14px;" id="sortbtn1"/>
                     </div>
                         <?php $i=0;foreach ($list as $studio) { ?>
-                    <div class="col-md-12 col-sm-6 datas" id="datas"  style="padding: 5px 0" onmouseover="myClick(<?php echo $i; ?>)">
-                         <a href="<?php echo base_url('homeweb/request_book?sid=');echo $studio['id']?>"></a>                         
+                         <div class="col-md-12 col-sm-6 datas studios_list" id="datas"  style="padding: 5px 0" >
+                         <a href="<?php echo base_url('homeweb/request_book?sid=').$studio['id'];?>">
+
                         <div class="col-lg-4"> 
                             <div class="studio_1">
                                 <a href="<?php echo base_url('homeweb/request_book?sid=');echo $studio['id']  ?>">
-                                <img src="<?php echo base_url().$studio['img_bk']?>" alt="" style="width:50%">
+                                <img src="<?php echo base_url().$studio['img_bk']?>" alt="Image not found" height="250px;">
                                 </a>
                             </div>   
                         </div>
+                    </a> 
+
                         <ul id="studio_sort"> 
                             <div class="studio_details">
                                 <div class="details_section2">
@@ -66,17 +68,18 @@
                                 </div>
                             </div>
                         </ul>
+                        
                     </div>
                         <?php $i++; } ?>
                     
                 </div>
                 </div>
             </div>
-            <div class="col-lg-6" style="padding: 0px 0px 0px 0!important">
+            <!-- <div class="col-lg-6" style="padding: 0px 0px 0px 0!important">
                 <div class="custom_map">
                     <div id="map"></div>       
                 </div>
-            </div>
+            </div> -->
         </div>
 
 <script type="text/javascript">

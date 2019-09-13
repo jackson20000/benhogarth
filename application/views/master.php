@@ -111,6 +111,48 @@
     }
     }
 </style>
+<style>
+  .dropbtn {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 115px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left:15px;
+  border-radius:3px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  z-index:10000;
+}
+.dropdownlink{
+  font-size:15px;
+  transition: transform .8s;
+}
+.dropdownlink:hover{
+  font-size:16px;
+  background-color:#1b1b1b;
+}
+</style>
 <div style="min-height:100vh;">
  <section id="slct" class="wrapper" style="background-color:black;padding-bottom: 0px;">
     <div class="container-fluid">
@@ -131,17 +173,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse" style="float:right;">
               <ul class="navbar-nav mr-auto w-100 justify-content-end navmenu">
-                <li class="nav-item">
-                  <a style="text-decoration:none;" class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/book_studio" target="_blank">BOOKING</a>
+                <li class="nav-item dropdown hidden-web">
+                  <a class="nav-link page-scroll dropbtn" >BOOKING</a>
+                    <div class="dropdown-content">
+                      <a class="dropdownlink" href="<?php echo base_url()?>homeweb/mix" target="_blank">MIX</a>
+                      <a class="dropdownlink" href="<?php echo base_url()?>homeweb/master" target="_blank">MASTER</a>
+                      <a class="dropdownlink" href="<?php echo base_url()?>homeweb/book_studio" target="_blank">ENGINEER</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                  <a style="text-decoration:none;" class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/mix" target="_blank">MIX</a>
-                </li>
-                <li class="nav-item">
-                  <a style="text-decoration:none;" class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/master" target="_blank">MASTER</a>
-                </li>
-                <li class="nav-item">
-                  <a style="text-decoration:none;" class="nav-link page-scroll" href="mailto:info@benhogarth.com">CONTACT</a>
+                <li class="nav-item hidden-mobile">
+                      <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/mix" target="_blank">MIX</a>
+                      <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/master" target="_blank">MASTER</a>
+                      <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/book_studio" target="_blank">ENGINEER</a>
                 </li>
               </ul>
             </div>

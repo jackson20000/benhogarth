@@ -155,7 +155,7 @@ svg{
   }
 }
 </style>
-<div class="container">
+<div class="container" style="min-height:80vh">
   <div class="box">
     <div class="success content-box">
       <svg id="successAnimation" class="animated " xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 70 70">

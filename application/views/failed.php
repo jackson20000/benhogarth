@@ -152,8 +152,8 @@ svg{
   }
 }
 </style>
-<div class="container">
-  <div class="box">
+<div class="container" style="min-height:80vh">
+  <div class="box" style="margin-top: 10vh;">
     <div class="success content-box">
       <svg id="failureAnimation" class="animated" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 70 70">
       <circle id="failureAnimationCircle" cx="35" cy="35" r="24" stroke="#ff4444" stroke-width="2" stroke-linecap="round" fill="transparent"/>

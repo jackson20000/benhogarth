@@ -1,5 +1,46 @@
 <link rel="stylesheet" href="<?php echo base_url()?>assets/frontend/css/index.css">
+<style>
+  .dropbtn {
+  cursor: pointer;
+}
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 115px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left:15px;
+  border-radius:3px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  z-index:10000;
+}
+.dropdownlink{
+  font-size:15px;
+  transition: transform .8s;
+}
+.dropdownlink:hover{
+  font-size:16px;
+  background-color:#1b1b1b;
+}
+</style>
 <style>
     .head_icon li{
     display:inline-block;
@@ -161,17 +202,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse" style="float:right;">
               <ul class="navbar-nav mr-auto w-100 justify-content-end navmenu">
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/book_studio" target="_blank">BOOKING</a>
+                <li class="nav-item dropdown hidden-web">
+                  <a class="nav-link page-scroll dropbtn" >BOOKING</a>
+                    <div class="dropdown-content">
+                      <a class="dropdownlink" href="<?php echo base_url()?>homeweb/mix" target="_blank">MIX</a>
+                      <a class="dropdownlink" href="<?php echo base_url()?>homeweb/master" target="_blank">MASTER</a>
+                      <a class="dropdownlink" href="<?php echo base_url()?>homeweb/book_studio" target="_blank">ENGINEER</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/mix" target="_blank">MIX</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/master" target="_blank">MASTER</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="mailto:info@benhogarth.com">CONTACT</a>
+                <li class="nav-item hidden-mobile">
+                      <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/mix" target="_blank">MIX</a>
+                      <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/master" target="_blank">MASTER</a>
+                      <a class="nav-link page-scroll" href="<?php echo base_url()?>homeweb/book_studio" target="_blank">ENGINEER</a>
                 </li>
               </ul>
             </div>
@@ -204,10 +246,10 @@
     <div class="container text-center">
       <div class="view" style="background-color:#ffffff;margin-bottom:15px;">
        
-       <a onclick="viewmore()" title="viewmore" style="color:black;" id="viewmore"><img class="viewmore" src="<?php echo base_url()?>assets/frontend/images/dropdown.png" style="height:55px;"></a>
+       <!-- <a onclick="viewmore()" title="viewmore" style="color:black;" id="viewmore"><img class="viewmore" src="<?php echo base_url()?>assets/frontend/images/dropdown.png" style="height:55px;"></a> -->
 
       </div></div>
-    </div><!-- container -->
+    </div>
   </section>
 
   <!-- book and upload -->
@@ -354,17 +396,17 @@ if(empty($_POST['name'])  		||
    }
    else{
 	
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-$message = $_POST['message'];
-	
-// Create the email and send the message
-$to = 'info@benhogarth.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\n\nMessage:\n$message\n\n";
-$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";	
-mail($to,$email_subject,$email_body,$headers);
+    $name = $_POST['name'];
+    $email_address = $_POST['email'];
+    $message = $_POST['message'];
+      
+    // Create the email and send the message
+    $to = 'info@benhogarth.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+    $email_subject = "Website Contact Form:  $name";
+    $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\n\nMessage:\n$message\n\n";
+    $headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+    $headers .= "Reply-To: $email_address";	
+    mail($to,$email_subject,$email_body,$headers);
    }	
 ?>
  

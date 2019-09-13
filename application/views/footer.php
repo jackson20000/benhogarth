@@ -71,6 +71,7 @@ font-size:40px;
                             <li><a href="https://twitter.com/Ben_Hogarth" class="fa fa-twitter" target="_blank"></a></li>
                             <li><a href="https://www.instagram.com/ben_hogarth" class="fa fa-instagram" target="_blank"></a></li>
                             <li><a href="https://open.spotify.com/playlist/7bvCgNenWit1QhuaaCl07p?si=6aaUIftIR1W2Q4tGV8_tAg" class="fa fa-spotify" target="_blank"></a></li>
+                            <li><a href="mailto:info@benhogarth.com" class="fa fa-envelope" ></a></li>
                         </ul>
                         </div>
                     </section>
@@ -152,6 +153,29 @@ font-size:40px;
             }
         });
     }
+    
+    $(window).scroll(function() {
+        var position = Math.floor($(window).scrollTop());
+        var bottom = Math.floor($(document).height() - $(window).height())-1;
+    if(position == bottom) {
+        $.ajax('<?php echo base_url() ?>homeweb/dataDiscoAjax', {
+            type: 'POST',  // http method
+            data: { startDate: offset },  // data to submit
+            success: function (data, status, xhr) {
+                console.log(JSON.parse(data));
+                $('#discodata').append(JSON.parse(data).output);
+                offset = offset + 12;
+                if(JSON.parse(data).count == false){
+                    $('#viewmore').hide();
+                }
+            },
+            error: function (jqXhr, textStatus, errorMessage) {
+                    alert(errorMessage);
+            }
+        });
+        console.log("viewmore fired");
+        }
+    });
 
     $(document).ready(function () {
       $("#testimonial-slider").owlCarousel({

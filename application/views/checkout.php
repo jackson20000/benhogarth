@@ -23,7 +23,7 @@
 									<input type="hidden" name="date" value="<?php echo date('d/m/y', strtotime($date)) ?>">
 								</div>
 				                <section>
-				                    <input id="amount" name="amount" type="hidden" min="1" placeholder="Amount" value="<?php echo number_format((float)$total, 2, '.', '') ?>" >
+				                    <input id="amount" name="amount" type="hidden" min="1" placeholder="Amount" value="<?php echo number_format((float)$total, 2, '.', '')/2 ?>" >
 
 				                    <div class="bt-drop-in-wrapper">
 				                        <div id="bt-dropin"></div>
@@ -83,13 +83,17 @@
 						      <th></th>
 						      <th></th>
 						      <th><?php echo $tax ?> (12%)</th>
-						    </tr style="height:30px">
-						      <tr>
+						    </tr >
+						      <tr style="height:50px;border-bottom:1px solid #b3b0b0;margin-bottom:15px;">
 						      <th>Total</th>
 						      <th></th>
 						      <th></th>
 						      <th>$<?php echo number_format((float)$total, 2, '.', '') ?></th>
 						    </tr>
+								<tr>
+								<th colspan="4">Up front Payment Amount: $<?php echo number_format((float)$total, 2, '.', '')/2 ?>  </th>
+								<th></th>
+								</tr>
 						</tbody>
 					</table>
 <!-- 					<div class="pay_btn">
