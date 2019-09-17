@@ -52,20 +52,22 @@ class Calender {
     }
 
     public function createEvent($data){
-        $start = $end = new DateTime(strtotime($data['date']." ".$data['stime']));
-        $end->add(new DateInterval('PT4H'));
+        // $start = $end = new DateTime(str_replace('/', '-', $data['date'])." ".str_replace('/', '-', $data['stime']));
+        $start =  DateTime::createFromFormat('d/m/y H:i', $data['date'].' '.$data['stime']);
+        $end = DateTime::createFromFormat('d/m/y H:i', $data['date'].' '.$data['etime']);
+
         $client = $this->getClient();
         $service = new Google_Service_Calendar($client);
         $event = new Google_Service_Calendar_Event(array(
-        'summary' => 'Benhogarth Site Booking',
+        'summary' => 'Benhogarth Studio Booking',
         'location' => $data['studio'],
         'description' => 'Booking from '.$data['name'],
         'start' => array(
-            'dateTime' => $start->format("Y-m-dTH:i:s"),
+            'dateTime' => $start->format(DateTime::ISO8601),
             'timeZone' => 'America/Los_Angeles',
         ),
         'end' => array(
-            'dateTime' => $end->format("Y-m-dTH:i:s"),
+            'dateTime' => $end->format(DateTime::ISO8601),
             'timeZone' => 'America/Los_Angeles',
         ),
         ));

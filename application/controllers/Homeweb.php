@@ -157,6 +157,8 @@ echo '<input type="button" id="load" value="Load More">';
 		$data['name'] = $this->input->post('name');
 		$data['email'] = $this->input->post('email');
 		$data['phone'] = $this->input->post('phone');
+		$data['instaid'] = $this->input->post('instaid');
+		$data['address'] = $this->input->post('address');
 		$data['studio'] = $this->input->post('studio');
 		$data['date'] = $this->input->post('date');
 		$data['stime'] = $this->input->post('stime');

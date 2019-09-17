@@ -27,7 +27,6 @@
   display: block;
 }
 
-
 .dropdown:hover .dropdown-content {
   display: block;
   z-index:10000;
@@ -188,7 +187,6 @@
       <div class="slct" style="background-color:black;font-family: arial!important;">
        <ul class="head_icon" style="position:absolute;">
           <li class="head_newicon">BENHOGARTH</li>
-         
           <!-- <li class="head_newicon"><a href="mailto:info@benhogarth.com" class="fa fa-envelope"></a></li>
           <li class="head_newicon"><a href="https://wetransfer.com" class="fa fa-upload" target="_blank"></a></li>
           <li class="head_newicon"><a href="<?php echo base_url()?>homeweb/booking" class="fa fa-calendar-check-o" target="_blank" ></a></li> -->
@@ -245,17 +243,14 @@
   <section id="view" class="wrapper"style="background-color:#ffffff;padding:0px;">
     <div class="container text-center">
       <div class="view" style="background-color:#ffffff;margin-bottom:15px;">
-       
-       <!-- <a onclick="viewmore()" title="viewmore" style="color:black;" id="viewmore"><img class="viewmore" src="<?php echo base_url()?>assets/frontend/images/dropdown.png" style="height:55px;"></a> -->
+      <!--  <a onclick="viewmore()" title="viewmore" style="color:black;" id="viewmore"><img class="viewmore" src="<?php echo base_url()?>assets/frontend/images/dropdown.png" style="height:55px;"></a> -->
 
       </div></div>
     </div>
   </section>
 
   <!-- book and upload -->
-
-                
-            
+          
   <!--<section id="book" class="">-->
   <!--  <div class="container">-->
   <!--    <div class="row">-->
@@ -263,9 +258,7 @@
   <!--      <a href="<?php echo base_url()?>homeweb/booking " ><img class="hvr-efft" src="<?php echo base_url()?>assets/frontend/images/booknow.png" alt="booknow"  style="width:100%" />-->
   <!--      <h2 class="effect-shine" style="color: white;margin: auto;text-align: center;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);">Book Now</h2>-->
   <!--      </a>-->
-                        
-
-       
+                               
   <!--      </div>-->
   <!--      <div class="col-md-6" style="margin-bottom:15px;">-->
   <!--        <a href="<?php echo base_url()?>homeweb/upload " ><img class="hvr-efft" src="<?php echo base_url()?>assets/frontend/images/upload.png" alt="upload"  style="width:100%" />-->
@@ -295,8 +288,7 @@
   <!--                      <div class="col-md-12">-->
   <!--                        <div class="form-group">-->
   <!--                          <input type="email" placeholder="Email" id="email" class="form-control" name="email" required-->
-  <!--                            data-error="Please enter your email">-->
-                           
+  <!--                            data-error="Please enter your email">-->                     
   <!--                        </div>-->
   <!--                      </div>-->
   <!--                      <div class="col-md-12">-->
@@ -325,7 +317,54 @@
   <!--</div>-->
   <!--Contact form-->
 
- 
+
+ <!-- use this for popup-->
+  <div id="boxes">
+    <div style="top: 199.5px; left: 350px; display: none;" id="dialog" class="window">Enter your details to Continue
+      <div id="popupfoot">
+        <div id="popup-details">
+          <form class="popup-form" method="post">
+            <div class="form-group">
+              <label class="col-md-4 control-label">Name</label>  
+              <div class="col-md-8"> 
+                <input  name="first_name" placeholder="First Name" class="form-control"  type="text" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-4 control-label">Phone Number</label>  
+              <div class="col-md-8"> 
+                <input  name="telephone" placeholder="Phone No:" class="form-control"  type="text" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-4 control-label">Email</label>  
+              <div class="col-md-8"> 
+                <input  name="email" placeholder="Email" class="form-control"  type="text" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-4 control-label">Instagram Id</label>  
+              <div class="col-md-8"> 
+                <input  name="instaid" placeholder="Instagram Id" class="form-control"  type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-4 control-label">Address</label>  
+              <div class="col-md-8"> 
+                <input  name="address" placeholder="Enter Address" class="form-control" type="text" required>
+              </div>
+            </div>
+            <div class="form-group" style="text-align: center;">
+              <input class="btn popup-btn close agree" type="submit" name="submit" value="Continue" >
+              </div>
+            </div>
+          </form>
+        </div>
+     </div>
+    </div>
+    <div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
+  </div>
+<!-- use this for popup-->
 <style>
 
 .load-more-container ul {
@@ -346,7 +385,6 @@
 .load-more-container ul li {
 }
 
-
 .load-more-container .load-more-btn .loaded {
   display: none;
 }
@@ -364,7 +402,88 @@
 .load-more-container #load-more:checked ~ .load-more-btn .unloaded {
   display: none;
 }
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  border-radius: 10px;
+  text-align: center;
+}
+#boxes #dialog {
+  width:600px; 
+  height:auto;
+  padding:10px;
+  background-color:#ffffff;
+  font-size: 15pt;
+}
+.maintext{
+  text-align: center;
+  text-decoration: none;
+}
+#popup-details{
+  font-size: 12pt;
+  text-align: left;
+}
+#popup-details .popup-form .form-control{
+  height:35px;
+  margin-bottom:25px;
+}
+#popup-details .popup-form .form-control:active,
+#popup-details .popup-form .form-control:focus{
+ border-color:#a7a7a7cf;
+}
+#popupfoot{
+  font-size: 16pt;
+  padding: 10px 20px;
+}
+#popupfoot a{
+  text-decoration: none;
+}
+.popup-btn a{
+  color:white; 
+}
+.popup-btn {
+  background:#545252;
+  color:white; 
+}
+
+.popupoption:hover{
+  background-color:#D1D1D1;
+  color: green;
+}
+.popupoption2:hover{
+  
+  color: red;
+}
+.close:focus, .close:hover{
+  opacity:unset;
+  color:white;
+}
+.close{
+     float: none; 
+    font-size: 21px;
+     font-weight: 400; 
+    line-height: 1;
+    color: white;
+    text-shadow: unset;
+    filter: alpha(opacity=20);
+    opacity: unset;
+}
 </style>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
 function myFunction() {
   var dots = document.getElementById("dots");
@@ -385,6 +504,55 @@ function myFunction() {
   }
 }
 </script>
+<script>
+function popup() {    
+
+    var id = '#dialog';
+  
+    //Get the screen height and width
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+  
+    //Set heigth and width to mask to fill up the whole screen
+    $('#mask').css({'width':maskWidth,'height':maskHeight});
+    
+    //transition effect   
+    $('#mask').fadeIn(500); 
+    $('#mask').fadeTo("slow",0.9);  
+  
+    //Get the window height and width
+    var winH = $(window).height();
+    var winW = $(window).width();
+              
+    //Set the popup window to center
+    $(id).css('top',  winH/2-$(id).height()/2);
+    $(id).css('left', winW/2-$(id).width()/2);
+  
+    //transition effect
+    $(id).fadeIn(2000);   
+  
+  //if close button is clicked
+  $('.window .close').click(function (e) {
+    //Cancel the link behavior
+    // e.preventDefault();
+    
+    $('#mask').hide();
+    $('.window').hide();
+  });    
+  
+};
+
+$(document).ready(function() {
+var isshow = localStorage.getItem('isshow');
+if (isshow== null) {
+localStorage.setItem('isshow', 1);
+
+// Show popup here
+  popup();
+}
+});
+
+</script>
 <?php
 // Check for empty fields
 if(empty($_POST['name'])  		||
@@ -399,7 +567,7 @@ if(empty($_POST['name'])  		||
     $name = $_POST['name'];
     $email_address = $_POST['email'];
     $message = $_POST['message'];
-      
+     
     // Create the email and send the message
     $to = 'info@benhogarth.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
     $email_subject = "Website Contact Form:  $name";
@@ -408,5 +576,14 @@ if(empty($_POST['name'])  		||
     $headers .= "Reply-To: $email_address";	
     mail($to,$email_subject,$email_body,$headers);
    }	
+
+  if (isset($_POST['submit'])) { 
+  $_SESSION['first_name'] = $_POST['first_name'];
+  $_SESSION['telephone'] = $_POST['telephone'];
+  $_SESSION['email'] = $_POST['email'];
+  $_SESSION['instaid'] = $_POST['instaid'];
+  $_SESSION['address'] = $_POST['address'];
+
+ } 
 ?>
  

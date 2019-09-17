@@ -145,6 +145,7 @@ body {
   border: 1px solid darkgray;
   padding: 15px;
   border-radius: 15px;
+  margin-bottom: 35px;
 }
 svg{
   height: 150px;
@@ -183,7 +184,7 @@ svg{
               <td align="right"><?php echo $stime; ?> - <?php echo $etime; ?></td>
             </tr>
             <tr>
-              <td>Amount : </td>
+              <td>Amount Paid: </td>
               <td align="right"><?php echo $amount; ?>$</td>
             </tr>
           </table>

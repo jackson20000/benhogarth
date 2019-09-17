@@ -12,11 +12,24 @@
 								<h3>Basic Information</h3>
 								<div class="tab-for">				
 									<h5>Full Name</h5>					
-									<input type="text" name="name" value="" required>
+									<input type="text" name="name" value="<?php if( isset($_SESSION["first_name"]) )
+									{
+										echo $_SESSION['first_name'];
+									}
+									?>" required>
 									<h5>Email Address</h5>
-									<input type="email" name="email" value="" required>
+									<input type="email" name="email" value="<?php  if( isset($_SESSION["email"]) ){
+										echo $_SESSION['email'];}?>" required>
 									<h5>Phone</h5>
-									<input type="text" name="phone" value="" required>
+									<input type="text" name="phone" value="<?php if( isset($_SESSION["telephone"]) ){
+										echo $_SESSION['telephone'];}?>" required>
+									<h5>Instagram ID</h5>
+									<input type="text" name="instaid" value="<?php if( isset($_SESSION["instaid"]) ){
+										echo $_SESSION['instaid'];}?>" required>
+									<h5>Address</h5>
+									<input type="text" name="address" value="<?php if( isset($_SESSION["address"]) ){
+										echo $_SESSION['address'];}?>" required>
+									
 									<input type="hidden" name="studio" value="<?php echo $studio['name'] ?>">
 									<input type="hidden" name="stime" value="<?php echo $start_time ?>">
 									<input type="hidden" name="etime" value="<?php echo $end_time ?>">
